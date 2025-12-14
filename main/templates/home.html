@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <input id="textInput" type="text" placeholder="Enter text here">
+    <button id="submitButton">Submit</button>
+    <br/>
+    <div id="responseDiv"></div>
+
+    <script>
+        document.getElementById('submitButton').addEventListener('click', function() {
+            const userInput = document.getElementById('textInput').value;
+            console.log('User Input:', userInput);
+            fetch('/process-name/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-CSRFToken': '{{ csrf_token }}'
+                },
+                body: new URLSearchParams({
+                    'name': userInput
+                })
+            }).then(response => response.json())
+            .then(data => {
+                console.log('Response from server:', data);
+                document.getElementById('responseDiv').innerText = data.greeting;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
