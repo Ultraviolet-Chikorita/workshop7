@@ -49,24 +49,24 @@ def farcaster_manifest_view(request):
   },
   "miniapp": {
     "version": "1",
-    "name": "The greatest Summariser mini app of all time",
+    "name": "summariser",
     "homeUrl": "https://thegreatestminiappofalltime.onrender.com/",
-    "iconUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWBuB632p-BzikvlVaPUTEubUuieUuoFM2TQ&s",
-    "splashImageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWBuB632p-BzikvlVaPUTEubUuieUuoFM2TQ&s",
+    "iconUrl": "https://static.vecteezy.com/system/resources/previews/011/995/200/non_2x/geometric-icon-logo-geometric-abstract-element-free-vector.jpg",
+    "splashImageUrl": "https://static.vecteezy.com/system/resources/previews/011/995/200/non_2x/geometric-icon-logo-geometric-abstract-element-free-vector.jpg",
     "splashBackgroundColor": "#020617",
     "webhookUrl": "https://thegreatestminiappofalltime.onrender.com/api/webhook",
     "subtitle": "summarise anything",
     "description": "A mini app that can summarise any text you give it.",
     "screenshotUrls": [
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWBuB632p-BzikvlVaPUTEubUuieUuoFM2TQ&s"
+      "https://static.vecteezy.com/system/resources/previews/011/995/200/non_2x/geometric-icon-logo-geometric-abstract-element-free-vector.jpg"
     ],
     "primaryCategory": "games",
     "tags": ["game", "miniapp", "base"],
     "heroImageUrl": "https://thegreatestminiappofalltime.onrender.com/api/webhook",
     "tagline": "Summarise anything, anywhere!",
-    "ogTitle": "The Greatest Summariser Mini App of All Time",
-    "ogDescription": "This is the greatest summariser mini app of all time. It can summarise anything you give it, in 5 words or less.",
-    "ogImageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWBuB632p-BzikvlVaPUTEubUuieUuoFM2TQ&s",
+    "ogTitle": "summariser",
+    "ogDescription": "This is summariser. It can summarise anything you give it, in 5 words or less.",
+    "ogImageUrl": "https://static.vecteezy.com/system/resources/previews/011/995/200/non_2x/geometric-icon-logo-geometric-abstract-element-free-vector.jpg",
     "noindex": true
   }
 }
@@ -82,5 +82,6 @@ def webhook_view(request):
     except json.JSONDecodeError:
         payload = {}
     return JsonResponse({"ok": True, "received": payload})
+
 
 
