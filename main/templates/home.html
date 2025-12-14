@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <meta name="fc:miniapp" content='{"version":"next","imageUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWBuB632p-BzikvlVaPUTEubUuieUuoFM2TQ&s","button":{"title":"Play Now","action":{"type":"launch_miniapp","name":"Summariser","url":"https://thegreatestminiappofalltime.onrender.com/"}}}' />
+    <script type="module">
+        import { sdk } from 'https://esm.sh/@farcaster/miniapp-sdk';
+        await sdk.actions.ready();
+    </script>
 </head>
 <body>
     <input id="textInput" type="text" placeholder="Enter text here">
