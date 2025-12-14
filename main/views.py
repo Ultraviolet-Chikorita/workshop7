@@ -62,7 +62,7 @@ def farcaster_manifest_view(request):
     ],
     "primaryCategory": "games",
     "tags": ["game", "miniapp", "base"],
-    "heroImageUrl": "https://thegreatestminiappofalltime.onrender.com/api/webhook",
+    "heroImageUrl": "https://static.vecteezy.com/system/resources/previews/011/995/200/non_2x/geometric-icon-logo-geometric-abstract-element-free-vector.jpg",
     "tagline": "Summarise anything, anywhere!",
     "ogTitle": "summariser",
     "ogDescription": "This is summariser. It can summarise anything you give it, in 5 words or less.",
@@ -82,6 +82,7 @@ def webhook_view(request):
     except json.JSONDecodeError:
         payload = {}
     return JsonResponse({"ok": True, "received": payload})
+
 
 
 
